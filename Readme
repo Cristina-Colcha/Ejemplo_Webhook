@@ -1,0 +1,58 @@
+# Webhook Example
+    Este proyecto es una implementación básica de una arquitectura de webhook con dos componentes principales: un servidor emisor y un servidor receptor. La aplicación muestra cómo registrar un evento en el servidor emisor y enviar los datos al servidor receptor a través de un webhook.
+
+## Tecnologías Usadas
+    Node.js: Plataforma para ejecutar código JavaScript en el servidor.
+    Express.js: Framework para manejar rutas y solicitudes HTTP.
+    Axios: Cliente HTTP para realizar solicitudes al servidor receptor.
+    Postman: Herramienta para probar y simular solicitudes HTTP.
+### Estructura del Proyecto
+
+    webhook-example/
+    ├── receptorWebhook.js   
+    ├── emisorWebhook.js    
+    ├── package.json       
+    └── README.md          
+### Requisitos Previos
+    Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
+
+    Node.js 
+    Postman (opcional, para pruebas)
+### Instalación
+    Clona este repositorio:
+
+    https://github.com/Cristina-Colcha/Ejemplo_Webhook.git 
+    cd webhook-example
+### Instala las dependencias:
+
+    npm install
+### Ejecución
+    Inicia el servidor receptor:
+
+    node receptorWebhook.js
+    Esto iniciará el servidor receptor en el puerto 3000.
+
+    Inicia el servidor emisor:
+
+
+    node emisorWebhook.js
+    Esto iniciará el servidor emisor en el puerto 4000.
+
+### Pruebas
+    Abre Postman y envía una solicitud POST al endpoint del servidor emisor:
+
+    URL: http://localhost:4000/register
+    Método: POST
+    Cuerpo (formato JSON):
+    json
+
+            {
+            "name": "Carlos Pérez",
+            "email": "carlos.perez@example.com",
+            "event": "new_user"
+            }
+    En la consola del servidor emisor (emisorWebhook.js), deberías ver que el webhook fue enviado correctamente.
+    En la consola del servidor receptor (receptorWebhook.js), deberías ver que los datos fueron recibidos y procesados.
+### Autor
+Cristina Colcha
+
