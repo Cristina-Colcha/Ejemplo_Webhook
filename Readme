@@ -28,14 +28,11 @@
     npm install
 ### Execute
     Start the receiver server:
-
-    node receiverWebhook.js
+     node receiverWebhook.js
     This will start the receiver server on port 3000.
 
     Start the sender server:
-
-
-    node senderWebhook.js
+     node senderWebhook.js
     This will start the sender server on port 4000.
 
 ### Testing
